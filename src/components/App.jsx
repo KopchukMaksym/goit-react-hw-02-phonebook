@@ -41,11 +41,9 @@ class App extends Component {
   render() {
     const { contacts, filter } = this.state;
 
-    const filterItems = contacts.filter(contact => {
-      if (contact.name.toLowerCase().includes(filter)) {
-        return contact;
-      }
-    });
+    const filterItems = contacts.filter(contact =>
+      contact.name.toLowerCase().includes(filter)
+    );
     return (
       <div className={s.section}>
         <h1>Phonebook</h1>
